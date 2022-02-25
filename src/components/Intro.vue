@@ -16,7 +16,7 @@
 
         <div class="layout_grid">
             <img src="../assets/map_gas.jpg" alt="北溪2號天然氣管線" loading="lazy" />
-            <p><i class="fa-solid fa-triangle"></i> 北溪2號天然氣管線1</p>
+            <p><i class="fa-solid fa-triangle"></i> 北溪2號天然氣管線</p>
             <p>{{ content_issue[0] }}</p>
             <p>{{ content_issue[1] }}</p>
         </div>
