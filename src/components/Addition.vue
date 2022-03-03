@@ -1,5 +1,5 @@
 <template>
-    <div class="layout" @scroll="scroll">
+    <div class="layout_addition" @scroll="scroll">
         <div class="layout_grid">
             <a
                 href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/euwar/"
@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style scoped>
+.layout_addition {
+    height: 100px;
+}
+
 .layout_grid {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 300px;
@@ -66,6 +70,7 @@ span {
     display: block;
     margin: auto;
     cursor: pointer;
+    filter: contrast(1);
 }
 
 a:hover {

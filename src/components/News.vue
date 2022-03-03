@@ -3,11 +3,23 @@
         <div class="layout_grid">
             <h2>{{ title }}</h2>
             <div>
-                <div class="layout_content">
+                <div class="layout_content" v-if="newsInfo.length > 0">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + this.newsInfo[0].ID" target="blank">
+                        <div class="layout_grid_inner_content">
+                            <div class="layout_img_inner">
+                                <picture>
+                                    <img :src="newsInfo[0].Image" loading="lazy" />
+                                </picture>
+                            </div>
+                            <h4>{{ newsInfo[0].Title }}</h4>
+                        </div>
+                    </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[1].Image" />
+                                <picture>
+                                    <img :src="newsInfo[1].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -15,7 +27,9 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[2].Image" />
+                                <picture>
+                                    <img :src="newsInfo[2].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -23,7 +37,9 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[3].Image" />
+                                <picture>
+                                    <img :src="newsInfo[3].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
@@ -31,7 +47,9 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[4].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[4].Image" />
+                                <picture>
+                                    <img :src="newsInfo[4].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[4].Title }}</h4>
                         </div>
@@ -39,17 +57,11 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[5].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[5].Image" />
+                                <picture>
+                                    <img :src="newsInfo[5].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[5].Title }}</h4>
-                        </div>
-                    </a>
-                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[6].ID" target="blank">
-                        <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[6].Image" />
-                            </div>
-                            <h4>{{ newsInfo[6].Title }}</h4>
                         </div>
                     </a>
                 </div>
@@ -72,26 +84,31 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
-            // eslint-disable-next-line no-undef
-            axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=俄烏衝突&Page=1&sp=10')
-                .then((response) => {
-                    // console.log(response)
-                    let data = response.data.ITEM
-                    data.forEach((item) => {
-                        this.newsInfo.push(item)
-                    })
+        // eslint-disable-next-line no-undef
+        axios
+            .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=俄烏衝突&Page=1&sp=10')
+            .then((response) => {
+                // console.log(response)
+                let data = response.data.ITEM
+                data.forEach((item) => {
+                    this.newsInfo.push(item)
                 })
-                .catch((error) => {
-                    console.log('error' + error)
-                })
-        }, 1000)
+            })
+            .catch((error) => {
+                console.log('error' + error)
+            })
     },
 }
 </script>
 
 <style scoped>
+picture {
+    max-width: 316px;
+    min-height: 300px;
+    display: block;
+    margin: auto;
+}
+
 h4 {
     display: -webkit-box;
     overflow: hidden;
@@ -101,6 +118,7 @@ h4 {
     line-height: 30px;
     max-height: 70px;
     padding: 0 0.3rem;
+    text-align: center;
 }
 
 .layout_grid div div:nth-last-child(1) a {
@@ -144,5 +162,6 @@ h4 {
 
 img {
     width: 100%;
+    height: 100%;
 }
 </style>
