@@ -4,11 +4,19 @@
             <h2><i class="fa-solid fa-swords"></i> {{ title }}</h2>
             <p>{{ content }}</p>
             <div>
-                <div class="layout_content">
+                <div class="layout_content" v-if="newsInfo.length > 0">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
+                        <div class="layout_grid_inner_content">
+                            <div class="layout_img_inner">
+                                <img :src="newsInfo[0].Image" loading="lazy" />
+                            </div>
+                            <h4>{{ newsInfo[0].Title }}</h4>
+                        </div>
+                    </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[1].Image" />
+                                <img :src="newsInfo[1].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -16,17 +24,9 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[2].Image" />
+                                <img :src="newsInfo[2].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
-                        </div>
-                    </a>
-                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
-                        <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[3].Image" />
-                            </div>
-                            <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
                     </a>
                 </div>
@@ -96,7 +96,7 @@ h4 {
 }
 
 .layout_grid_inner_content {
-    border: 1px solid #464646;
+    background-color: rgb(0, 0, 0);
 }
 
 .layout_grid div div:nth-last-child(1) a {

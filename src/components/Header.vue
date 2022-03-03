@@ -1,5 +1,5 @@
 <template>
-    <div class="layout">
+    <div class="layout_header">
         <div class="progress"></div>
         <div class="layout_grid">
             <div>
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.layout {
+.layout_header {
     background-color: #fffffff5;
     position: fixed;
     width: 100%;
@@ -112,6 +112,7 @@ h5 span {
 
 h5 img {
     width: 32px;
+    height: 32px;
 }
 
 a:hover {
@@ -132,5 +133,9 @@ a:hover {
 /* 漢堡選單 */
 .layout_grid div:nth-child(2) {
     text-align: right;
+}
+
+.fa-duotone {
+    width: 30px;
 }
 </style>

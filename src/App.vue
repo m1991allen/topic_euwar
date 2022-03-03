@@ -157,10 +157,11 @@ a {
     text-decoration: none;
     display: block;
     transition: 0.3s;
+    filter: contrast(0.5);
 }
 
 a:hover {
-    background-color: #eeeeee7c;
+    filter: contrast(1);
 }
 
 i {
@@ -252,6 +253,7 @@ h4 {
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 .btn_more {
@@ -264,6 +266,7 @@ img {
 
 .layout {
     margin: auto;
+    min-height: 500px;
 }
 
 .layout_grid {
@@ -273,6 +276,14 @@ img {
     padding: 4.1rem 1rem;
 }
 
+#section_news,
+#section1,
+#section2,
+#section3 {
+    min-height: 300px;
+}
+
+/* 4x3 縱橫比 */
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
@@ -289,7 +300,6 @@ img {
     width: 100%;
 }
 
-/* 4x3 縱橫比 */
 .iframe-container-4x3 {
     padding-top: 75%;
 }
