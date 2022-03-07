@@ -252,6 +252,7 @@ h4 {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .btn_more {
@@ -279,6 +280,8 @@ img {
     position: relative;
     margin-top: 3rem;
     z-index: 1;
+    width: 100%;
+    min-height: 100px;
 }
 .iframe-container iframe {
     border: 0;

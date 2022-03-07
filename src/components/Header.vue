@@ -4,7 +4,7 @@
         <div class="layout_grid">
             <div>
                 <h5>
-                    <img :src="logo" />
+                    <img :src="logo" loading="lazy" />
                     <span>{{ title }}</span>
                 </h5>
             </div>
@@ -84,6 +84,7 @@ export default {
     background-color: #fffffff5;
     position: fixed;
     width: 100%;
+    min-height: 60px;
     box-shadow: 0px 2px 10px #1a1e30;
     z-index: 9999;
 }
@@ -112,6 +113,7 @@ h5 span {
 
 h5 img {
     width: 32px;
+    height: 32px;
 }
 
 a:hover {
@@ -132,5 +134,10 @@ a:hover {
 /* 漢堡選單 */
 .layout_grid div:nth-child(2) {
     text-align: right;
+}
+
+.fa-duotone {
+    width: 32px;
+    height: 32px;
 }
 </style>

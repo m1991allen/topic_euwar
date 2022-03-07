@@ -7,7 +7,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[1].Image" />
+                                <img :src="newsInfo[1].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -15,7 +15,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[2].Image" />
+                                <img :src="newsInfo[2].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -23,7 +23,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[3].Image" />
+                                <img :src="newsInfo[3].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
@@ -31,7 +31,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[4].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[4].Image" />
+                                <img :src="newsInfo[4].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[4].Title }}</h4>
                         </div>
@@ -39,7 +39,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[5].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[5].Image" />
+                                <img :src="newsInfo[5].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[5].Title }}</h4>
                         </div>
@@ -47,7 +47,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[6].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <img :src="newsInfo[6].Image" />
+                                <img :src="newsInfo[6].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[6].Title }}</h4>
                         </div>
@@ -101,6 +101,12 @@ h4 {
     line-height: 30px;
     max-height: 70px;
     padding: 0 0.3rem;
+    text-align: center;
+}
+
+.layout {
+    min-height: 300px;
+    width: 100%;
 }
 
 .layout_grid div div:nth-last-child(1) a {
@@ -138,11 +144,33 @@ h4 {
 }
 
 .layout_content .layout_img_inner {
-    height: 170px;
+    max-width: 500px;
+    max-height: 170px;
+    margin: auto;
     overflow-y: hidden;
 }
 
-img {
+@media screen and (max-width: 1024px) {
+    .layout_content .layout_img_inner {
+        min-height: 200px;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout_content .layout_img_inner {
+        min-height: 260px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .layout_content .layout_img_inner {
+        min-height: 200px;
+    }
+}
+
+.layout_content .layout_img_inner img {
     width: 100%;
+    height: auto;
 }
 </style>

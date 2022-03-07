@@ -4,7 +4,7 @@
         <picture>
             <source srcset="../assets/banner_mobile_768.png" media="(max-width: 768px)" />
             <source srcset="../assets/banner_tab_1024.png" media="(max-width: 1024px)" />
-            <img src="../assets/banner_web_1920.png" />
+            <img src="../assets/banner_web_1920.png" loading="lazy" />
         </picture>
     </div>
 </template>
@@ -21,8 +21,12 @@ export default {
 </script>
 
 <style scoped>
+.layout {
+    width: 100%;
+    min-height: 200px;
+}
+
 img {
-    max-width: 100%;
     pointer-events: none;
     margin-top: 4rem;
 }

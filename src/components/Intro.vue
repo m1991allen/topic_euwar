@@ -7,7 +7,9 @@
         </div>
         <hr />
         <div class="layout_grid">
-            <img src="../assets/map.jpg" alt="頓內次克（Donetsk）、盧甘斯克（Luhansk）" loading="lazy" />
+            <picture>
+                <img src="../assets/map.jpg" alt="頓內次克（Donetsk）、盧甘斯克（Luhansk）" loading="lazy"
+            /></picture>
             <p><i class="fa-solid fa-triangle"></i> 頓內次克（Donetsk）、盧甘斯克（Luhansk）</p>
             <p>{{ content_twoCountry[0] }}</p>
             <p>{{ content_twoCountry[1] }}</p>
@@ -15,7 +17,9 @@
         <hr />
 
         <div class="layout_grid">
-            <img src="../assets/map_gas.jpg" alt="北溪2號天然氣管線" loading="lazy" />
+            <picture>
+                <img src="../assets/map_gas.jpg" alt="北溪2號天然氣管線" loading="lazy" />
+            </picture>
             <p><i class="fa-solid fa-triangle"></i> 北溪2號天然氣管線</p>
             <p>{{ content_issue[0] }}</p>
             <p>{{ content_issue[1] }}</p>
@@ -52,14 +56,22 @@ export default {
 </script>
 
 <style scoped>
+picture {
+    max-width: 1000px;
+    max-height: auto;
+}
 img {
     margin-bottom: 1rem;
+    width: 100%;
+    min-height: 300px;
     box-shadow: 1px 2px 8px black;
 }
 .layout {
     background-color: rgb(52, 52, 52);
     padding: 3rem 0;
     color: white;
+    width: 100%;
+    min-height: 300px;
 }
 
 .layout p {
@@ -71,6 +83,7 @@ img {
     padding: 1rem;
     margin-bottom: 1.2rem;
     text-align: left;
+    min-height: 300px;
 }
 
 .layout_grid p {

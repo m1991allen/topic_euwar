@@ -4,9 +4,9 @@
             <h2>{{ title }}</h2>
             <div class="iframe-container">
                 <iframe
-                    width="1314"
-                    height="748"
-                    src="https://www.youtube.com/embed/XGEmg3vhrzU"
+                    width="1677"
+                    height="847"
+                    src="https://www.youtube.com/embed/yguQ1SzPM5U"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -33,6 +33,8 @@ export default {
     background-color: rgb(52, 52, 52);
     padding: 3rem 0;
     color: white;
+    min-height: 300px;
+    width: 100%;
 }
 
 .layout p {

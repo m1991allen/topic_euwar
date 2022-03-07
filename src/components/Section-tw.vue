@@ -7,25 +7,19 @@
                 <div class="layout_content">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[1].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[1].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[2].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[2].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[3].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[3].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
                     </a>
@@ -84,6 +78,11 @@ export default {
     color: white;
 }
 
+.layout {
+    min-height: 300px;
+    width: 100%;
+}
+
 h4 {
     display: -webkit-box;
     overflow: hidden;
@@ -139,7 +138,22 @@ h4 {
 
 .layout_content .layout_img_inner {
     height: 170px;
+    min-width: 300px;
     overflow-y: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .layout_content .layout_img_inner {
+        min-height: 300px;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    .layout_content .layout_img_inner {
+        min-height: 200px;
+        min-width: 200px;
+    }
 }
 
 .fa-solid {

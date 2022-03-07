@@ -6,25 +6,19 @@
                 <div class="layout_sort">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[1].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[1].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[2].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[2].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[3].Image" />
-                            </div>
+                            <div class="layout_img_inner"><img :src="newsInfo[3].Image" loading="lazy" /></div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
                     </a>
@@ -34,9 +28,7 @@
                 </div>
                 <div class="layout_sort">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
-                        <div class="layout_img">
-                            <img :src="newsInfo[0].Image" />
-                        </div>
+                        <div class="layout_img"><img :src="newsInfo[0].Image" loading="lazy" /></div>
                         <h3>
                             {{ newsInfo[0].Title }}
                         </h3>
@@ -77,13 +69,20 @@ export default {
 </script>
 
 <style scoped>
+.layout {
+    min-height: 300px;
+    width: 100%;
+}
+
 .layout_img {
-    max-height: 270px;
+    max-height: 300px;
+    min-width: 100px;
     overflow-y: hidden;
 }
 
 .layout_img_inner {
-    max-height: 80px;
+    max-height: 100px;
+    min-width: 100px;
     overflow-y: hidden;
 }
 
