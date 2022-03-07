@@ -1,5 +1,5 @@
 <template>
-    <div class="layout">
+    <div class="layout_footer">
         <div class="layout_grid">
             <p>{{ title }}</p>
         </div>
@@ -18,13 +18,15 @@ export default {
 </script>
 
 <style scoped>
+.layout_footer {
+    background-color: rgb(132, 179, 215);
+    height: 130px;
+}
+
 p {
     font-size: 1rem;
 }
 
-.layout {
-    background-color: rgb(132, 179, 215);
-}
 .layout_grid {
     grid-template-columns: 1fr;
     padding: 1rem;

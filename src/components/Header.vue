@@ -1,5 +1,5 @@
 <template>
-    <div class="layout">
+    <div class="layout_header">
         <div class="progress"></div>
         <div class="layout_grid">
             <div>
@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-.layout {
+.layout_header {
     background-color: #fffffff5;
     position: fixed;
     width: 100%;
@@ -137,7 +137,11 @@ a:hover {
 }
 
 .fa-duotone {
+<<<<<<< HEAD
     width: 32px;
     height: 32px;
+=======
+    width: 30px;
+>>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
 }
 </style>

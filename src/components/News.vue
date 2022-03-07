@@ -3,11 +3,25 @@
         <div class="layout_grid">
             <h2>{{ title }}</h2>
             <div>
-                <div class="layout_content">
+                <div class="layout_content" v-if="newsInfo.length > 0">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + this.newsInfo[0].ID" target="blank">
+                        <div class="layout_grid_inner_content">
+                            <div class="layout_img_inner">
+                                <picture>
+                                    <img :src="newsInfo[0].Image" loading="lazy" />
+                                </picture>
+                            </div>
+                            <h4>{{ newsInfo[0].Title }}</h4>
+                        </div>
+                    </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[1].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[1].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -16,6 +30,10 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[2].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[2].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -24,6 +42,10 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[3].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[3].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
@@ -32,6 +54,10 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[4].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[4].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[4].Title }}</h4>
                         </div>
@@ -40,10 +66,15 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[5].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[5].Image" loading="lazy" />
+                                </picture>
                             </div>
                             <h4>{{ newsInfo[5].Title }}</h4>
                         </div>
                     </a>
+
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[6].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
@@ -72,26 +103,31 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
-            // eslint-disable-next-line no-undef
-            axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=俄烏衝突&Page=1&sp=10')
-                .then((response) => {
-                    // console.log(response)
-                    let data = response.data.ITEM
-                    data.forEach((item) => {
-                        this.newsInfo.push(item)
-                    })
+        // eslint-disable-next-line no-undef
+        axios
+            .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=俄烏衝突&Page=1&sp=10')
+            .then((response) => {
+                // console.log(response)
+                let data = response.data.ITEM
+                data.forEach((item) => {
+                    this.newsInfo.push(item)
                 })
-                .catch((error) => {
-                    console.log('error' + error)
-                })
-        }, 1000)
+            })
+            .catch((error) => {
+                console.log('error' + error)
+            })
     },
 }
 </script>
 
 <style scoped>
+picture {
+    max-width: 316px;
+    min-height: 300px;
+    display: block;
+    margin: auto;
+}
+
 h4 {
     display: -webkit-box;
     overflow: hidden;
@@ -172,5 +208,6 @@ h4 {
 .layout_content .layout_img_inner img {
     width: 100%;
     height: auto;
+    height: 100%;
 }
 </style>

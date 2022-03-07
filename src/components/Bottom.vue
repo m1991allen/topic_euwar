@@ -1,5 +1,5 @@
 <template>
-    <div class="layout">
+    <div class="layout_addition">
         <div class="layout_bottom">
             <a href="#section_news">最新消息</a>
             <a href="#section_tw">台海影響</a>
@@ -13,6 +13,10 @@ export default {}
 </script>
 
 <style>
+.layout_addition {
+    height: 100px;
+}
+
 .layout_bottom {
     display: flex;
     position: fixed;
@@ -22,6 +26,7 @@ export default {}
     z-index: 999;
     width: 100%;
     border: 1px solid;
+    height: 20px;
 }
 .layout_bottom a {
     width: 33.33%;

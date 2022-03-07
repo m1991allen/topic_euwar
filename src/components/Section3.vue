@@ -2,11 +2,17 @@
     <div class="layout" id="section3">
         <div class="layout_grid">
             <h2><i class="fa-solid fa-swords"></i> {{ title }}</h2>
-            <div class="layout_grid_inner">
+            <div class="layout_grid_inner" v-if="newsInfo.length > 0">
                 <div>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
                         <div class="layout_img">
+
                             <img :src="newsInfo[0].Image" loading="lazy" />
+
+                            <picture>
+                                <img :src="newsInfo[0].Image" loading="lazy" />
+                            </picture>
+
                         </div>
                         <h3>
                             {{ newsInfo[0].Title }}
@@ -16,19 +22,43 @@
                 <div>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
+
                             <div class="layout_img_inner"><img :src="newsInfo[1].Image" loading="lazy" /></div>
+
+                            <div class="layout_img_inner">
+                                <picture>
+                                    <img :src="newsInfo[1].Image" loading="lazy" />
+                                </picture>
+                            </div>
+
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
+
                             <div class="layout_img_inner"><img :src="newsInfo[2].Image" loading="lazy" /></div>
+
+                            <div class="layout_img_inner">
+                                <picture>
+                                    <img :src="newsInfo[2].Image" loading="lazy" />
+                                </picture>
+                            </div>
+
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
+
                             <div class="layout_img_inner"><img :src="newsInfo[3].Image" loading="lazy" /></div>
+
+                            <div class="layout_img_inner">
+                                <picture>
+                                    <img :src="newsInfo[3].Image" loading="lazy" />
+                                </picture>
+                            </div>
+
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
                     </a>
@@ -37,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="iframe-container">
+            <div class="iframe-container">
                 <iframe
                     width="2032"
                     height="847"
@@ -47,7 +77,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -115,6 +145,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    min-height: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +161,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin-bottom: 1rem;
+    min-height: 80px;
 }
 
 .btn_more {

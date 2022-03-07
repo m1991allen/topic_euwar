@@ -2,11 +2,17 @@
     <div class="layout" id="section1">
         <div class="layout_grid">
             <h2><i class="fa-solid fa-swords"></i> {{ title }}</h2>
-            <div class="layout_grid_inner">
+            <div class="layout_grid_inner" v-if="newsInfo.length > 0">
                 <div>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
                         <div class="layout_img">
+
                             <img :src="newsInfo[0].Image" loading="lazy" />
+
+                            <picture>
+                                <img :src="newsInfo[0].Image" loading="lazy" />
+                            </picture>
+
                         </div>
                         <h3>
                             {{ newsInfo[0].Title }}
@@ -17,7 +23,13 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
+
                                 <img :src="newsInfo[1].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[1].Image" loading="lazy" />
+                                </picture>
+
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -25,7 +37,13 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
+
                                 <img :src="newsInfo[2].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[2].Image" loading="lazy" />
+                                </picture>
+
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -33,7 +51,13 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
+
                                 <img :src="newsInfo[3].Image" loading="lazy" />
+
+                                <picture>
+                                    <img :src="newsInfo[3].Image" loading="lazy" />
+                                </picture>
+
                             </div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
@@ -72,7 +96,6 @@ export default {
         axios
             .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=俄烏情勢&Page=1&sp=4')
             .then((response) => {
-                // console.log(response)
                 let data = response.data.ITEM
                 data.forEach((item) => {
                     this.newsInfo.push(item)
@@ -134,6 +157,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin-bottom: 1rem;
+    min-height: 80px;
 }
 
 .btn_more {
