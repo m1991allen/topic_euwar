@@ -157,7 +157,7 @@ a {
     text-decoration: none;
     display: block;
     transition: 0.3s;
-    filter: contrast(0.5);
+    filter: contrast(0.7);
 }
 
 a:hover {
@@ -251,10 +251,10 @@ h4 {
     padding-left: 0.5rem;
 }
 
-img {
+img,
+picture {
     width: 100%;
     height: auto;
-    height: 100%;
 }
 
 .btn_more {
@@ -267,7 +267,6 @@ img {
 
 .layout {
     margin: auto;
-    min-height: 500px;
 }
 
 .layout_grid {
@@ -281,7 +280,16 @@ img {
 #section1,
 #section2,
 #section3 {
-    min-height: 300px;
+    min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    #section_news,
+    #section1,
+    #section2,
+    #section3 {
+        min-height: 500px;
+    }
 }
 
 /* 4x3 縱橫比 */

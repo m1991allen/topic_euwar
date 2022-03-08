@@ -8,21 +8,19 @@
         <hr />
         <div class="layout_grid">
             <picture>
-<<<<<<< HEAD
                 <img src="../assets/map.jpg" alt="頓內次克（Donetsk）、盧甘斯克（Luhansk）" loading="lazy"
             /></picture>
             <p><i class="fa-solid fa-triangle"></i> 頓內次克（Donetsk）、盧甘斯克（Luhansk）</p>
-=======
+            <picture>
                 <img src="../assets/negotiation.jpg" alt="烏俄首度談判" loading="lazy" />
             </picture>
             <div></div>
             <p><i class="fa-solid fa-triangle"></i> 烏俄首度談判</p>
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
+
             <p>{{ content_twoCountry[0] }}</p>
             <p>{{ content_twoCountry[1] }}</p>
         </div>
         <hr />
-<<<<<<< HEAD
 
         <div class="layout_grid">
             <picture>
@@ -32,8 +30,6 @@
             <p>{{ content_issue[0] }}</p>
             <p>{{ content_issue[1] }}</p>
         </div>
-=======
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
     </div>
 </template>
 
@@ -61,13 +57,11 @@ export default {
 
 <style scoped>
 picture {
-<<<<<<< HEAD
     max-width: 1000px;
     max-height: auto;
-=======
+
     min-height: 260px;
     max-width: 1000px;
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
 }
 img {
     margin-bottom: 1rem;

@@ -137,11 +137,8 @@ a:hover {
 }
 
 .fa-duotone {
-<<<<<<< HEAD
     width: 32px;
     height: 32px;
-=======
     width: 30px;
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
 }
 </style>

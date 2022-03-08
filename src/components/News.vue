@@ -7,9 +7,7 @@
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + this.newsInfo[0].ID" target="blank">
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
-                                <picture>
-                                    <img :src="newsInfo[0].Image" loading="lazy" />
-                                </picture>
+                                <img :src="newsInfo[0].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[0].Title }}</h4>
                         </div>
@@ -18,10 +16,6 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[1].Image" loading="lazy" />
-
-                                <picture>
-                                    <img :src="newsInfo[1].Image" loading="lazy" />
-                                </picture>
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
@@ -30,10 +24,6 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[2].Image" loading="lazy" />
-
-                                <picture>
-                                    <img :src="newsInfo[2].Image" loading="lazy" />
-                                </picture>
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -42,10 +32,6 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[3].Image" loading="lazy" />
-
-                                <picture>
-                                    <img :src="newsInfo[3].Image" loading="lazy" />
-                                </picture>
                             </div>
                             <h4>{{ newsInfo[3].Title }}</h4>
                         </div>
@@ -54,10 +40,6 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[4].Image" loading="lazy" />
-
-                                <picture>
-                                    <img :src="newsInfo[4].Image" loading="lazy" />
-                                </picture>
                             </div>
                             <h4>{{ newsInfo[4].Title }}</h4>
                         </div>
@@ -66,21 +48,8 @@
                         <div class="layout_grid_inner_content">
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[5].Image" loading="lazy" />
-
-                                <picture>
-                                    <img :src="newsInfo[5].Image" loading="lazy" />
-                                </picture>
                             </div>
                             <h4>{{ newsInfo[5].Title }}</h4>
-                        </div>
-                    </a>
-
-                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[6].ID" target="blank">
-                        <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner">
-                                <img :src="newsInfo[6].Image" loading="lazy" />
-                            </div>
-                            <h4>{{ newsInfo[6].Title }}</h4>
                         </div>
                     </a>
                 </div>
@@ -121,8 +90,14 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 768px) {
+    .section_news {
+        min-height: 2200px;
+    }
+}
+
 picture {
-    max-width: 316px;
+    max-width: 400px;
     min-height: 300px;
     display: block;
     margin: auto;
@@ -138,11 +113,6 @@ h4 {
     max-height: 70px;
     padding: 0 0.3rem;
     text-align: center;
-}
-
-.layout {
-    min-height: 300px;
-    width: 100%;
 }
 
 .layout_grid div div:nth-last-child(1) a {
@@ -182,6 +152,7 @@ h4 {
 .layout_content .layout_img_inner {
     max-width: 500px;
     max-height: 170px;
+    min-height: 170px;
     margin: auto;
     overflow-y: hidden;
 }
@@ -203,11 +174,5 @@ h4 {
     .layout_content .layout_img_inner {
         min-height: 200px;
     }
-}
-
-.layout_content .layout_img_inner img {
-    width: 100%;
-    height: auto;
-    height: 100%;
 }
 </style>

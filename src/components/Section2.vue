@@ -6,39 +6,24 @@
                 <div class="layout_sort">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner"><img :src="newsInfo[1].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[1].Title }}</h4>
-
                             <div class="layout_img_inner">
-                                <picture>
-                                    <img :src="newsInfo[0].Image" loading="lazy" />
-                                </picture>
+                                <img :src="newsInfo[0].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[0].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner"><img :src="newsInfo[2].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[2].Title }}</h4>
-
                             <div class="layout_img_inner">
-                                <picture>
-                                    <img :src="newsInfo[1].Image" loading="lazy" />
-                                </picture>
+                                <img :src="newsInfo[1].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
                         <div class="layout_grid_inner_content">
-                            <div class="layout_img_inner"><img :src="newsInfo[3].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[3].Title }}</h4>
-
                             <div class="layout_img_inner">
-                                <picture>
-                                    <img :src="newsInfo[2].Image" loading="lazy" />
-                                </picture>
+                                <img :src="newsInfo[2].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
                         </div>
@@ -49,12 +34,8 @@
                 </div>
                 <div class="layout_sort">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
-                        <div class="layout_img"><img :src="newsInfo[0].Image" loading="lazy" /></div>
-
                         <div class="layout_img">
-                            <picture>
-                                <img :src="newsInfo[0].Image" loading="lazy" />
-                            </picture>
+                            <img :src="newsInfo[0].Image" loading="lazy" />
                         </div>
 
                         <h3>
@@ -97,13 +78,9 @@ export default {
 </script>
 
 <style scoped>
-.layout {
-    min-height: 300px;
-    width: 100%;
-}
-
 .layout_img {
-    max-height: 300px;
+    max-height: 400px;
+    min-height: 200px;
     min-width: 100px;
     overflow-y: hidden;
 }

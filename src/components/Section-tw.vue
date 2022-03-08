@@ -7,41 +7,26 @@
                 <div class="layout_content" v-if="newsInfo.length > 0">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[0].ID" target="blank">
                         <div class="layout_grid_inner_content">
-<<<<<<< HEAD
-                            <div class="layout_img_inner"><img :src="newsInfo[1].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[1].Title }}</h4>
-=======
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[0].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[0].Title }}</h4>
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
                         <div class="layout_grid_inner_content">
-<<<<<<< HEAD
-                            <div class="layout_img_inner"><img :src="newsInfo[2].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[2].Title }}</h4>
-=======
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[1].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[1].Title }}</h4>
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
                         <div class="layout_grid_inner_content">
-<<<<<<< HEAD
-                            <div class="layout_img_inner"><img :src="newsInfo[3].Image" loading="lazy" /></div>
-                            <h4>{{ newsInfo[3].Title }}</h4>
-=======
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[2].Image" loading="lazy" />
                             </div>
                             <h4>{{ newsInfo[2].Title }}</h4>
->>>>>>> 56bc375082ac8b229cd0e34a075c1e2dba5e7de6
                         </div>
                     </a>
                 </div>
@@ -99,11 +84,6 @@ export default {
     color: white;
 }
 
-.layout {
-    min-height: 300px;
-    width: 100%;
-}
-
 h4 {
     display: -webkit-box;
     overflow: hidden;
@@ -117,6 +97,7 @@ h4 {
 
 .layout_grid_inner_content {
     background-color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 .layout_grid div div:nth-last-child(1) a {
