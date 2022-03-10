@@ -6,30 +6,6 @@
             <p>{{ content_intro[2] }}</p>
         </div>
         <hr />
-        <div class="layout_grid">
-            <picture>
-                <img src="../assets/map.jpg" alt="頓內次克（Donetsk）、盧甘斯克（Luhansk）" loading="lazy"
-            /></picture>
-            <p><i class="fa-solid fa-triangle"></i> 頓內次克（Donetsk）、盧甘斯克（Luhansk）</p>
-            <picture>
-                <img src="../assets/negotiation.jpg" alt="烏俄首度談判" loading="lazy" />
-            </picture>
-            <div></div>
-            <p><i class="fa-solid fa-triangle"></i> 烏俄首度談判</p>
-
-            <p>{{ content_twoCountry[0] }}</p>
-            <p>{{ content_twoCountry[1] }}</p>
-        </div>
-        <hr />
-
-        <div class="layout_grid">
-            <picture>
-                <img src="../assets/map_gas.jpg" alt="北溪2號天然氣管線" loading="lazy" />
-            </picture>
-            <p><i class="fa-solid fa-triangle"></i> 北溪2號天然氣管線</p>
-            <p>{{ content_issue[0] }}</p>
-            <p>{{ content_issue[1] }}</p>
-        </div>
     </div>
 </template>
 
