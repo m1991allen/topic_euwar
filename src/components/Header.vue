@@ -5,7 +5,9 @@
             <div>
                 <h5>
                     <img :src="logo" loading="lazy" />
-                    <span>{{ title }}</span>
+                    <a href="https://www.ftvnews.com.tw/" target="_blank">
+                        <span>{{ title }}</span></a
+                    >
                 </h5>
             </div>
             <div>
@@ -80,6 +82,16 @@ export default {
 </script>
 
 <style scoped>
+a:hover {
+    background-color: inherit !important;
+    padding: 0rem !important;
+    color: black !important;
+}
+
+a {
+    filter: contrast(1) !important;
+}
+
 .layout_header {
     background-color: #fffffff5;
     position: fixed;
