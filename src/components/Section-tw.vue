@@ -37,8 +37,8 @@
             <div class="iframe-container">
                 <iframe
                     width="2032"
-                    height="847"
-                    src="https://www.youtube.com/embed/LMKO7eRez0Y"
+                    height="831"
+                    src="https://www.youtube.com/embed/rIq-ENslsck"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

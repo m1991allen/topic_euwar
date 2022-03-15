@@ -45,9 +45,9 @@
             </div>
             <div class="iframe-container">
                 <iframe
-                    width="1184"
-                    height="644"
-                    src="https://www.youtube.com/embed/j5NHd24ARqw"
+                    width="2032"
+                    height="847"
+                    src="https://www.youtube.com/embed/p6xeGTCACb0"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
