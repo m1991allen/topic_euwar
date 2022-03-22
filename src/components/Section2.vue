@@ -111,7 +111,6 @@ export default {
 .layout_sort:nth-child(2) {
     background-color: #343434;
     padding: 1rem;
-    filter: drop-shadow(2px 4px 6px black);
 }
 
 .layout_sort:nth-child(2) a {

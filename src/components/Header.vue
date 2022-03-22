@@ -20,23 +20,8 @@
         </div>
         <div class="layout_menu" v-if="isShow">
             <ul>
-                <li>
-                    <a href="#section_news"> 最新消息</a>
-                </li>
-                <li>
-                    <a href="#section1"> 俄烏情勢</a>
-                </li>
-                <li>
-                    <a href="#section2"> 美國介入</a>
-                </li>
-                <li>
-                    <a href="#section3"> 各國斡旋</a>
-                </li>
-                <li>
-                    <a href="#section_tw"> 台海影響</a>
-                </li>
-                <li>
-                    <a href="#section_live"> 新聞直播</a>
+                <li v-for="(item, index) in anchor" :key="index">
+                    <a :href="item.href">{{ item.title }}</a>
                 </li>
             </ul>
         </div>
@@ -51,6 +36,36 @@ export default {
             title: `民視新聞網`,
             logo: require('../assets/logo_ftv.svg'),
             isShow: false,
+            anchor: [
+                {
+                    title: '最新消息',
+                    href: '#section_news',
+                },
+                {
+                    title: '戰地故事',
+                    href: '#section_photo',
+                },
+                {
+                    title: '俄烏情勢',
+                    href: '#section1',
+                },
+                {
+                    title: '美國介入',
+                    href: '#section2',
+                },
+                {
+                    title: '各國斡旋',
+                    href: '#section3',
+                },
+                {
+                    title: '台海影響',
+                    href: '#section_tw',
+                },
+                {
+                    title: '新聞直播',
+                    href: '#section_live',
+                },
+            ],
         }
     },
 

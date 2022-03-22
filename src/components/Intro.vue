@@ -12,8 +12,8 @@
             <p>{{ content_gas[1] }}</p>
         </div>
         <div class="layout_grid">
-            <img src="../assets/map-gas.jpg" alt="歐洲各國多依賴天然氣？" />
-            <i class="fa-solid fa-triangle"> <span> 歐洲各國多依賴天然氣？</span></i>
+            <img src="../assets/map-gas.jpg" alt="歐洲各國多依賴俄羅斯天然氣？" />
+            <i class="fa-solid fa-triangle"> <span> 歐洲各國多依賴俄羅斯天然氣？</span></i>
         </div>
         <div class="layout_grid">
             <p>{{ content_internal[0] }}</p>
@@ -32,7 +32,7 @@ export default {
         return {
             // 背景
             content_intro: [
-                `俄羅斯正式動武侵略烏克蘭，蒲亭繼2月21日簽署法令，承認烏克蘭東部「頓內次克」與「盧甘斯克」2個分離共和國的獨立地位，並下令進軍維和後，2月24日正式展開「特別軍事行動」，形同正式開戰。`,
+                `俄羅斯正式動武侵略烏克蘭，普丁繼2月21日簽署法令，承認烏克蘭東部「頓內次克」與「盧甘斯克」2個分離共和國的獨立地位，並下令進軍維和後，2月24日正式展開「特別軍事行動」，形同正式開戰。`,
             ],
 
             // 天然氣

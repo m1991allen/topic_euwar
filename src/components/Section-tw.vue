@@ -56,7 +56,7 @@ export default {
         return {
             title: '台海影響',
             content:
-                '俄羅斯、烏克蘭緊張情勢升溫，戰火一觸即發，儘管相隔遙遠，我國仍舊緊盯俄烏局勢發展。因為根據外媒報導，北京當局正觀察拜登政府會如何處理衝突，以作為其對台灣採取更具侵略性行動的指標。',
+                '俄羅斯、烏克蘭開戰，儘管相隔遙遠，我國仍舊緊盯俄烏局勢發展，因為根據外媒報導，北京當局正觀察拜登政府會如何處理衝突，以作為其對台灣採取更具侵略性行動的指標。',
             newsInfo: [],
         }
     },
@@ -96,7 +96,7 @@ h4 {
 }
 
 .layout_grid_inner_content {
-    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(160, 160, 160);
     text-align: center;
 }
 
@@ -115,8 +115,7 @@ h4 {
 
 .layout_grid {
     background-color: rgb(52, 52, 52);
-    margin: 4rem auto;
-    filter: drop-shadow(2px 4px 6px black);
+    margin: 4rem auto;    
 }
 
 .layout_content {

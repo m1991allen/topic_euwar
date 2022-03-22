@@ -4,6 +4,7 @@
         <Banner />
         <Intro />
         <News />
+        <SectionPhoto />
         <Section1 />
         <Section2 />
         <Section3 />
@@ -23,6 +24,7 @@ import Section1 from '@/components/Section1.vue'
 import Section2 from '@/components/Section2.vue'
 import Section3 from '@/components/Section3.vue'
 import SectionTw from '@/components/Section-tw.vue'
+import SectionPhoto from '@/components/Section-photo.vue'
 import News from '@/components/News.vue'
 import Addition from '@/components/Addition.vue'
 import Bottom from '@/components/Bottom.vue'
@@ -39,6 +41,7 @@ export default {
         Section2,
         Section3,
         SectionTw,
+        SectionPhoto,
         Video,
         News,
         Addition,
@@ -313,5 +316,11 @@ picture {
 
 .iframe-container-4x3 {
     padding-top: 75%;
+}
+
+.layout_inner .layout_photo p {
+    text-align: left;
+    font-size: 1rem;
+    padding: 1rem 3rem 2rem !important;
 }
 </style>
