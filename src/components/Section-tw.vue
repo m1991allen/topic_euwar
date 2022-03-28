@@ -36,9 +36,9 @@
             </div>
             <div class="iframe-container">
                 <iframe
-                    width="2032"
-                    height="831"
-                    src="https://www.youtube.com/embed/rIq-ENslsck"
+                    width="916"
+                    height="515"
+                    src="https://www.youtube.com/embed/HdGqVyZaLqI"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -115,7 +115,7 @@ h4 {
 
 .layout_grid {
     background-color: rgb(52, 52, 52);
-    margin: 4rem auto;    
+    margin: 4rem auto;
 }
 
 .layout_content {

@@ -2,8 +2,8 @@
     <div class="layout_addition">
         <div class="layout_bottom">
             <a href="#section_news">最新消息</a>
+            <a href="#section_photo">戰地故事</a>
             <a href="#section_tw">台海影響</a>
-            <a href="#section_live">新聞直播</a>
         </div>
     </div>
 </template>
