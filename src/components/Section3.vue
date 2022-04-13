@@ -45,17 +45,17 @@
                         <a href="https://www.ftvnews.com.tw/tag/各國斡旋/" target="_blank">更多新聞</a>
                     </div>
                 </div>
-                <div class="iframe-container">
-                    <iframe
-                        width="916"
-                        height="515"
-                        src="https://www.youtube.com/embed/zvyUTVjy7A0"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe
+                    width="916"
+                    height="515"
+                    src="https://www.youtube.com/embed/zvyUTVjy7A0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
             </div>
         </div>
     </div>
