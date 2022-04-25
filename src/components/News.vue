@@ -9,7 +9,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[0].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[0].Title }}</h4>
+                            <h3>{{ newsInfo[0].Title }}</h3>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[1].ID" target="blank">
@@ -17,7 +17,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[1].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[1].Title }}</h4>
+                            <h3>{{ newsInfo[1].Title }}</h3>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[2].ID" target="blank">
@@ -25,7 +25,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[2].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[2].Title }}</h4>
+                            <h3>{{ newsInfo[2].Title }}</h3>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[3].ID" target="blank">
@@ -33,7 +33,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[3].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[3].Title }}</h4>
+                            <h3>{{ newsInfo[3].Title }}</h3>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[4].ID" target="blank">
@@ -41,7 +41,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[4].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[4].Title }}</h4>
+                            <h3>{{ newsInfo[4].Title }}</h3>
                         </div>
                     </a>
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[5].ID" target="blank">
@@ -49,7 +49,7 @@
                             <div class="layout_img_inner">
                                 <img :src="newsInfo[5].Image" loading="lazy" />
                             </div>
-                            <h4>{{ newsInfo[5].Title }}</h4>
+                            <h3>{{ newsInfo[5].Title }}</h3>
                         </div>
                     </a>
                 </div>
@@ -103,7 +103,7 @@ picture {
     margin: auto;
 }
 
-h4 {
+h3 {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;

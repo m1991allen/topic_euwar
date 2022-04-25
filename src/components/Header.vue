@@ -3,12 +3,12 @@
         <div class="progress"></div>
         <div class="layout_grid">
             <div>
-                <h5>
+                <p>
                     <img :src="logo" loading="lazy" />
                     <a href="https://www.ftvnews.com.tw/" target="_blank">
                         <span>{{ title }}</span></a
                     >
-                </h5>
+                </p>
             </div>
             <div>
                 <i
@@ -125,7 +125,7 @@ a {
     padding: 1rem 0;
 }
 
-h5 {
+p {
     font-size: 1.8rem;
     text-align: left;
     cursor: default;
@@ -134,11 +134,11 @@ h5 {
     align-items: center;
 }
 
-h5 span {
+p span {
     padding: 0 1rem;
 }
 
-h5 img {
+p img {
     width: 32px;
     height: 32px;
 }
