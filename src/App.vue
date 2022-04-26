@@ -295,6 +295,12 @@ picture {
     }
 }
 
+.layout_inner .layout_photo p {
+    text-align: left;
+    font-size: 1rem;
+    padding: 1rem 3rem 2rem !important;
+}
+
 /* 4x3 縱橫比 */
 .iframe-container {
     overflow: hidden;
@@ -316,11 +322,5 @@ picture {
 
 .iframe-container-4x3 {
     padding-top: 75%;
-}
-
-.layout_inner .layout_photo p {
-    text-align: left;
-    font-size: 1rem;
-    padding: 1rem 3rem 2rem !important;
 }
 </style>
